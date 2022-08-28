@@ -3,7 +3,7 @@
 /// The variants' documentations are taken from [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status),
 /// which is written by [Mozilla Contributors](https://developer.mozilla.org/en-US/docs/MDN/About/contributors.txt),
 /// licensed under [CC=BY-SA v2.5](https://creativecommons.org/licenses/by-sa/2.5/)
-#[derive(PartialEq)]
+#[derive(Clone, PartialEq)]
 #[repr(u16)]
 pub enum HttpStatusCode {
     /// 100 Continue
