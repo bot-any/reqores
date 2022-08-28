@@ -2,7 +2,7 @@
 pub use client::{ClientRequest, ClientResponse};
 pub use http_method::HttpMethod;
 pub use http_status_code::{HttpStatusCode, HttpStatusCodeParseError};
-pub use server::{ServerRequest, ServerResponse, ServerResponseBuilder};
+pub use server::{ServerRequest, ServerResponse, ServerResponseBuilder, ServerResponsePart};
 
 mod client;
 mod http_method;
