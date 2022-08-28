@@ -20,8 +20,8 @@ We don't need async-body, streaming response, etc.
 ### What is the meaning of the name
 
 Req(uest) or Res(ponse).
-But actually the name has been inspired inspired by the animation, [Lycoris Recoil](https://lycorisrecoil.com/).
+But actually the name has been inspired by the animation, [Lycoris Recoil](https://lycorisrecoil.com/).
 
 ## Acknowledgement
 
-- The structure has been heavily inspired by [kiwiyou/telbot](https://github.com/kiwiyou/telbot/)
+- The structure is based on [kiwiyou/telbot](https://github.com/kiwiyou/telbot/)
