@@ -2,6 +2,11 @@
 name = "reqores"
 version = "0.1.0"
 edition = "2021"
+authors = ["RanolP <public.ranolp@gmail.com"]
+repository = "https://github.com/bot-any/reqores"
+license = "MIT"
+description = "Oversimplified http request/response abstraction layer"
+readme = "./README.md"
 
 [dependencies]
 serde = "1"
