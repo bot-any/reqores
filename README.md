@@ -1,6 +1,6 @@
 # reqores
 
-Oversimplified http request/response abstraction layer for `bot_any` packages.
+Oversimplified http request/response abstraction layer for `bot-any` packages.
 
 ## Goal
 
@@ -15,7 +15,7 @@ Oversimplified http request/response abstraction layer for `bot_any` packages.
 ### Why not [`http-types`](https://crates.io/crates/http-types)?
 
 It has too complex overwhelming API.
-We don't need async-body. streaming response, etc.
+We don't need async-body, streaming response, etc.
 
 ### What is the meaning of the name
 
