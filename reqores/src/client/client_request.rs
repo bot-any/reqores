@@ -19,7 +19,7 @@ pub trait ClientRequest {
 
     fn method(&self) -> HttpMethod;
 
-    fn deserialize(&self, response: &impl ClientResponse) -> Result<Self::Response, String> {
+    fn deserialize(&self, response: &dyn ClientResponse) -> Result<Self::Response, String> {
         serde_json::from_slice(response.body()).map_err(|e| e.to_string())
     }
 }
