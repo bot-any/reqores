@@ -1,0 +1,15 @@
+[package]
+name = "reqores-universal-cf-worker"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+worker = "0.0.10"
+reqores = { path = "../reqores", version = "0.1" }
+
+[features]
+client = []
+server = []
+default = ["client", "server"]
