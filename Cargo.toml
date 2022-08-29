@@ -1,5 +1,2 @@
 [workspace]
-members = [
-    "reqores",
-    "reqores-universal-cf-worker"
-]
+members = ["reqores", "reqores-universal-cf-worker", "reqores-client-surf"]
