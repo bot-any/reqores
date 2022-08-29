@@ -24,6 +24,7 @@ impl ServerResponse {
     }
 }
 
+#[derive(Default)]
 pub struct ServerResponseBuilder {
     status: Option<HttpStatusCode>,
     headers: Vec<(String, String)>,
@@ -32,11 +33,7 @@ pub struct ServerResponseBuilder {
 
 impl ServerResponseBuilder {
     pub fn new() -> Self {
-        ServerResponseBuilder {
-            status: None,
-            headers: Vec::new(),
-            body: None,
-        }
+        Default::default()
     }
 
     pub fn with_header(mut self, name: String, value: String) -> Self {
