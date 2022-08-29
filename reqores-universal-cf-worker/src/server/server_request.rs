@@ -23,6 +23,6 @@ impl ServerRequest for CfWorkerServerRequest {
     }
 }
 
-pub async fn accept_request(request: Request) -> worker::Result<CfWorkerServerRequest> {
+pub async fn decode_request(request: Request) -> worker::Result<CfWorkerServerRequest> {
     CfWorkerServerRequest::new(request).await
 }
