@@ -1,7 +1,7 @@
 use reqores::{ClientRequest, HttpMethod};
 use worker::{wasm_bindgen::JsValue, Fetch, Headers, Method, Request, RequestInit};
 
-use super::CfWorkerClientResponse;
+use super::client_response::CfWorkerClientResponse;
 
 pub struct CfWorkerClient;
 
