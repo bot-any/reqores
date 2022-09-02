@@ -17,7 +17,7 @@ pub trait ClientRequest {
     type Response: DeserializeOwned;
 
     fn headers(&self) -> Vec<(String, String)> {
-        Default::default()
+        vec![headers::content_type_json_utf8()]
     }
 
     fn url(&self) -> String;
