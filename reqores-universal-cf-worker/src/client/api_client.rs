@@ -11,7 +11,6 @@ impl CfWorkerClient {
         client_request: Req,
     ) -> Result<Req::Response, worker::Error> {
         let mut headers = Headers::new();
-        headers.set("Content-Type", "application/json; charset=UTF-8")?;
         for (k, v) in client_request.headers() {
             headers.set(&k, &v)?;
         }

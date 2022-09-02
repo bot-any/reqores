@@ -4,6 +4,15 @@ use crate::HttpMethod;
 
 use super::ClientResponse;
 
+pub mod headers {
+    pub fn content_type_json_utf8() -> (String, String) {
+        (
+            "Content-Type".to_string(),
+            "application/json; charset=UTF-8".to_string(),
+        )
+    }
+}
+
 pub trait ClientRequest {
     type Response: DeserializeOwned;
 

@@ -26,7 +26,6 @@ impl SurfClient {
             HttpMethod::Delete => self.0.delete(&client_request.url()),
             HttpMethod::Patch => self.0.patch(&client_request.url()),
         };
-        request = request.header("Content-Type", "application/json; charset=UTF-8");
         for (k, v) in client_request.headers() {
             request = request.header(&*k, v);
         }

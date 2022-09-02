@@ -1,4 +1,4 @@
-pub use client_request::ClientRequest;
+pub use client_request::{headers, ClientRequest};
 pub use client_response::ClientResponse;
 
 mod client_request;
