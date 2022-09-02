@@ -1,8 +1,18 @@
 use reqores::{ClientRequest, HttpMethod};
+use surf::Client;
 
 use crate::client_response::SurfClientResponse;
 
-pub struct SurfClient;
+pub struct SurfClient(Client);
+
+impl SurfClient {
+    pub fn new() -> Self {
+        SurfClient(Client::new())
+    }
+    pub fn with_client(client: Client) -> Self {
+        SurfClient(client)
+    }
+}
 
 impl SurfClient {
     pub async fn call<Req: ClientRequest>(
@@ -10,11 +20,11 @@ impl SurfClient {
         client_request: Req,
     ) -> surf::Result<Req::Response> {
         let mut request = match client_request.method() {
-            HttpMethod::Get => surf::get(&client_request.url()),
-            HttpMethod::Put => surf::put(&client_request.url()),
-            HttpMethod::Post => surf::post(&client_request.url()),
-            HttpMethod::Delete => surf::delete(&client_request.url()),
-            HttpMethod::Patch => surf::patch(&client_request.url()),
+            HttpMethod::Get => self.0.get(&client_request.url()),
+            HttpMethod::Put => self.0.put(&client_request.url()),
+            HttpMethod::Post => self.0.post(&client_request.url()),
+            HttpMethod::Delete => self.0.delete(&client_request.url()),
+            HttpMethod::Patch => self.0.patch(&client_request.url()),
         };
         request = request.header("Content-Type", "application/json; charset=UTF-8");
         for (k, v) in client_request.headers() {
