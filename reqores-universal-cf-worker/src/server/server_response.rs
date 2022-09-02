@@ -7,7 +7,7 @@ pub fn encode_response(server_response: ServerResponse) -> worker::Result<Respon
         response = response.with_status(u16::from(code));
     }
 
-    for (name, value) in response.headers() {
+    for (name, value) in server_response.headers {
         response.headers_mut().set(&name, &value)?;
     }
 
