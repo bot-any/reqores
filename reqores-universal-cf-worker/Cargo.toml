@@ -1,6 +1,6 @@
 [package]
 name = "reqores-universal-cf-worker"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2021"
 authors = ["RanolP <public.ranolp@gmail.com"]
 repository = "https://github.com/bot-any/reqores"
@@ -9,7 +9,7 @@ description = "reqores implementation for Cloudflare Workers"
 readme = "../README.md"
 
 [dependencies]
-worker = "0.0.10"
+worker = "0.0.11"
 reqores = { path = "../reqores", version = "0.1" }
 
 [features]
