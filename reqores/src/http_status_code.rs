@@ -68,7 +68,7 @@ pub enum HttpStatusCode {
 
     /// 208 Already Reported (WebDAV)
     ///
-    /// Used inside a <dav:propstat> response element to avoid repeatedly enumerating the internal members of multiple bindings to the same collection.
+    /// Used inside a \<dav:propstat\> response element to avoid repeatedly enumerating the internal members of multiple bindings to the same collection.
     AlreadyReported = 208,
 
     /// 226 IM Used (HTTP Delta encoding)
